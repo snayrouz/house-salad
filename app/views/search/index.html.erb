@@ -1,6 +1,13 @@
 <h1><%= @members.count %> Results</h1>
 
-<% @members.each do |member| %>
+<table>
 
-
-<% end %>
+  <tbody>
+  <tr><% @members.each do |member| %></tr>
+    <td>  <%= member.name %></td>
+    <td>   <%= member.role %></td>
+    <td>   <%= member.party %></td>
+    <td>   <%= member.district %></td>
+  <% end %>
+  </tbody>
+</table>

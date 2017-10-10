@@ -5,7 +5,7 @@ class SearchController < ApplicationController
       faraday.response :logger
       faraday.adapter Faraday.default_adapter
     end
-    conn.headers["X-API-KEY"] = "S9JON3ruNOI6XiyymcnZ7gtsjnToPxuXyT0bgeaX"
+    conn.headers["X-API-KEY"] = ENV["PROPUBLICA_KEY"]
     response = conn.get("/congress/v1/members/house/#{params[:state]}/current.json")
     @members = JSON.parse(response.body, symbolize_names:true)[:results]
   end

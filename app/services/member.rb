@@ -7,10 +7,10 @@ class Member
   def initialize(attributes ={})
     @attributes = attributes
     @name       = attributes[:name]
-    @role      = attributes[:role]
-    @party     = attributes[:party]
-    @district  = attributes[:district]
-    @seniority = attributes[:seniority]
+    @role       = attributes[:role]
+    @party      = attributes[:party]
+    @district   = attributes[:district]
+    @seniority  = attributes[:seniority]
   end
 
   def name

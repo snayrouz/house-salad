@@ -1,11 +1,19 @@
 <h1><%= @members.count %> Results</h1>
-<div class="members">
-  <% @members.each do |member| %>
-  <ul class="member">
-    <li class="name"><%= member.name %></li>
-    <li class="role"><%= member.role %></li>
-    <li class="party"><%= member.party %></li>
-    <li class="district"><%= member.district %></li>
-  </ul>
+<table class="members">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Party</th>
+      <th>District</th>
+    </tr>
+  </thead>
+  <tbody>
+ <tr class="member"><% @members.each do |member| %> </tr>
+    <td class="name"><%= member.name %></td>
+    <td class="role"><%= member.role %></td>
+    <td class="party"><%= member.party %></td>
+    <td class="district"><%= member.district %></td>
   <% end %>
-</div>
+  </tbody>
+</table>
